@@ -1,0 +1,9 @@
+import React from 'react'
+
+export const Login = () => (
+
+    <div>
+    <h1>Login Page</h1>
+    <p>Home</p>
+</div>
+)
