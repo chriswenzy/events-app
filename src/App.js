@@ -1,6 +1,7 @@
 import React, { Component} from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.css'
+import { Create_event } from "./pages/Create_event";
 import { Login } from "./pages/Login";
 import { Programs } from "./pages/Programs";
 
@@ -14,6 +15,7 @@ class App extends Component {
 
               <Route exact path="/" component={Login} />
               <Route exact path="/events" component={Programs} />
+              <Route exact path="/create-event" component={Create_event} />
               
               
             </Switch>

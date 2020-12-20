@@ -19,9 +19,10 @@ export const Login = () => {
         <Styles>
            
             <Container>
+                
                 <Row className="justify-content-md-center align-items-center">
                     <Col md={5}>
-                    <Card className="shadow">
+                    <Card className="shadow bg-info" >
                 <Card.Body>
                 <Form >
                 <Form.Group as={Col}  controlId="username">
@@ -32,7 +33,7 @@ export const Login = () => {
 
                 <div className="text-center">
                     <Link to="/events">
-                    <Button variant="primary">Login</Button>
+                    <Button variant="light">Login</Button>
                     </Link>
                 </div>
 
