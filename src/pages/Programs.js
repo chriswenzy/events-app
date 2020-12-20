@@ -28,12 +28,13 @@ export const Programs = () => {
                     <Card>
                         <Card.Img variant="top" src={flyer} />
                         <Card.Body>
+                            <Card.Title>Comechat podcast</Card.Title>
                         <Card.Text>
                             Some quick example text to build on the card title and make up the bulk
                             of the card's content.
                         </Card.Text>
                         <div className="text-center">
-                            <Link to="/events">
+                            <Link to="/live">
                             <Button variant="primary">Attend</Button>
                             </Link>
                         </div>
@@ -41,39 +42,6 @@ export const Programs = () => {
                     </Card>
                 </Col>
 
-                <Col md={4}>
-                    <Card>
-                        <Card.Img variant="top" src={flyer} />
-                        <Card.Body>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk
-                            of the card's content.
-                        </Card.Text>
-                        <div className="text-center">
-                            <Link to="/events">
-                            <Button variant="primary">Attend</Button>
-                            </Link>
-                        </div>
-                        </Card.Body>
-                    </Card>
-                </Col>
-
-                <Col md={4}>
-                    <Card>
-                        <Card.Img variant="top" src={flyer} />
-                        <Card.Body>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk
-                            of the card's content.
-                        </Card.Text>
-                        <div className="text-center">
-                            <Link to="/events">
-                            <Button variant="primary">Attend</Button>
-                            </Link>
-                        </div>
-                        </Card.Body>
-                    </Card>
-                </Col>
             </Row>
             </Container>
 
