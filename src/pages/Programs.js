@@ -1,19 +1,13 @@
 import React from 'react'
 import "../App.css"
 import { Link } from 'react-router-dom';
-import { Col, Container, Button, Form, Card, Row} from 'react-bootstrap';
-import styled from 'styled-components';
+import { Col, Container, Button, Card, Row} from 'react-bootstrap';
 import flyer from "../assets/event.jpg"
 
 
-const Styles = styled.div `
-
-`
 
 export const Programs = () => {
-    return (
-        <Styles>
-           
+    return (           
             <Container>
             <Row className="m-4">
                 <Col md={4}>
@@ -68,7 +62,5 @@ export const Programs = () => {
                 </Col>
             </Row>
             </Container>
-
-        </Styles>
     )
 }

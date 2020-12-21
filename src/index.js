@@ -4,6 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {CometChat} from '@cometchat-pro/chat'
+import {API_REGION, APPID} from './constant/constant'
+
+
+var appID = APPID;
+var region = API_REGION
+var appSetting = new CometChat.AppSettingsBuilder().subscribePresenceForAllUsers().setRegion(region).build();
+CometChat.init(appID, appSetting).then(
+  () => {
+    console.log("Initialization completed successfully");
+  },
+  error => {
+    console.log("Initialization failed with error:", error);
+  }
+);
 
 ReactDOM.render(
   <React.StrictMode>
