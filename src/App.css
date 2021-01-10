@@ -7,3 +7,21 @@ body {
   background: #ff0000;
   
 }
+
+.container {
+  background-color: #ffff;
+  border-radius: 5px;
+  margin: 2px 0;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
