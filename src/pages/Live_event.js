@@ -20,6 +20,38 @@ const Styles = styled.div `
     padding: 5px;
 }
 
+.chat-sec{
+  height: 500px;
+  overflow: auto;
+}
+
+.msg{
+  margin-bottom: 9px;
+  position: absolute;
+  bottom: 0;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+input[type=text]{
+  width: 300px;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+button{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
 `
 
 export const Live_event = ({match}) => {
@@ -151,7 +183,7 @@ React.useEffect(()=>{
                 </Col>
                 <Col sm={4}>
                     
-                <Card>
+                <Card className="chat-sec">
                 <Card.Header as="h5">Chat section</Card.Header>
                 <Card.Body>
                    {messages.map((message,i)=>(
@@ -159,7 +191,7 @@ React.useEffect(()=>{
                     <p><span><b>{message.sender ? message.sender.name:message.name}:</b></span> {message.text}</p>
                     </div>
                    ))}
-                   <div className="container-fluid">
+                   <div className="msg">
                     <form onSubmit={sendMessage}>
                    <input type="text" placeholder="Write Your message here" value={message} onChange={(e)=> setMessage(e.target.value)} />
                    <button type="submit">submit</button>
