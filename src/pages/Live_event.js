@@ -6,10 +6,6 @@ import {CometChat} from '@cometchat-pro/chat'
 
 const Styles = styled.div `
 
-.align-items-center{
-    margin-top: 200px;
-}
-
 .display-name{
     background: black;
     color: white;
@@ -22,34 +18,34 @@ const Styles = styled.div `
 
 .chat-sec{
   height: 500px;
-  overflow: auto;
+  padding-bottom: 20px;
 }
 
 .msg{
-  margin-bottom: 9px;
   position: absolute;
   bottom: 0;
-}
-
-input[type=text]:focus {
-  border: 3px solid #555;
+  margin: 6px;
+  padding: 5px;
 }
 
 input[type=text]{
-  width: 300px;
+  width: 330px;
   padding: 5px;
-  box-sizing: border-box;
-  border: 1px solid gray;
-  border-radius: 4px;
+  border: none;
+  border-bottom: 1px solid gray;
 }
 
 button{
-  background-color: black;
+  background-color: white;
   border: none;
-  color: white;
+  color: gray;
   padding: 4px;
   cursor: pointer;
-  border-radius: 4px;
+}
+
+.main-chat{
+  height:300px;
+  overflow: scroll;
 }
 
 `
@@ -181,29 +177,30 @@ React.useEffect(()=>{
                     </iframe>
                     <h5> <strong>{event !== undefined ? event.title :null}</strong> </h5>
                 </Col>
-                <Col sm={4}>
-                    
+
+                <Col sm={4}>   
                 <Card className="chat-sec">
                 <Card.Header as="h5">Chat section</Card.Header>
-                <Card.Body>
+                <Card.Body className="main-chat">
+                   <div className="">
                    {messages.map((message,i)=>(
-                    <div className="container" key={i}>
+                    <div className="" key={i}>
                     <p><span><b>{message.sender ? message.sender.name:message.name}:</b></span> {message.text}</p>
                     </div>
                    ))}
-                   <div className="msg">
-                    <form onSubmit={sendMessage}>
-                   <input type="text" placeholder="Write Your message here" value={message} onChange={(e)=> setMessage(e.target.value)} />
-                   <button type="submit">submit</button>
-                   </form>
                    </div>
+                   
                 </Card.Body>
+                <div className="msg">
+                    <form onSubmit={sendMessage}>   
+                    <input type="text" placeholder="Say something" value={message} onChange={(e)=> setMessage(e.target.value)} />
+                    <button type="submit"> <i className="fa fa-send"></i>  </button>
+                    </form>
+                   </div>
                 </Card>
                 
                 </Col>
             </Row>
-           
-
         </Styles>
     )
 }
